@@ -1,0 +1,84 @@
+:root{
+    --cor-hover: #8F8D31; 
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,ol.li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-color: #8F8D31; 
+}
+.menu {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 16px; 
+    background-color: rgb(88, 64, 64) !important; 
+    padding: 16px;
+    width: 100%; 
+}
+li {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 4px 16px;
+    transition: .5s;
+}
+.menu li:hover {
+    background-color: var(--cor-hover);
+}
+.menu img {
+    height: 85px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 8px;
+}
+
+/* Estilização da barra de pesquisa */
+#shrekpesquisa {
+    width: 250px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#shrekpesquisa:focus {
+    border-color: #33672C;
+}
+
+/* Estilização do botão de pesquisa */
+#pesquisar {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#pesquisar:hover {
+    background: #33672C;
+}
