@@ -51,34 +51,183 @@ li {
     transform: translate(-50%, -50%);
     gap: 8px;
 }
-
-/* Estilização da barra de pesquisa */
-#shrekpesquisa {
-    width: 250px;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #ddd;
-    border-radius: 30px 0 0 30px;
-    outline: none;
-    transition: border-color 0.3s ease;
+.filmes {
+    display: flex;
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 16px;
+    min-height: 100vh; /* Faz com que ocupe toda a altura da tela */
 }
 
-#shrekpesquisa:focus {
-    border-color: #33672C;
+.filmes li {
+    background-color: #8F8D31;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    text-align: center;
+}
+.filmes img {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-/* Estilização do botão de pesquisa */
-#pesquisar {
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #ffffff;
-    color: #000000;
+.filmes span {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.filmes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 16px;
+}
+.filmes button {
+    background: #000000;
+    color: rgb(255, 255, 255);
     border: none;
-    border-radius: 0 30px 30px 0;
+    padding: 12px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 20px;
+    width: 60%;
+    margin-top: 10px; 
+}
+.filmes button:hover {
+    background: #a1a095;
+}
+.shrek1 {
+    height: 500px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shrek1 img {
+    width: 100%;
+    height: 320px; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+.saiba-mais {
+    background: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 60%; 
 }
 
-#pesquisar:hover {
-    background: #33672C;
+.saiba-mais:hover {
+    background: #a1a095;
+}
+
+.shrek2 {
+    height: 500px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shrek2 img {
+    width: 100%;
+    height: 320px; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+
+.shrek2 {
+    height: 500px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shrek2 img {
+    width: 100%;
+    height: 320px; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+.shrek3 {
+    height: 500px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shrek3 img {
+    width: 100%;
+    height: 320px; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+.shrek3 {
+    height: 500px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shrek3 img {
+    width: 100%;
+    height: 320px; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+.shrek4 {
+    height: 500px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shrek4 img {
+    width: 100%;
+    height: 320px; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+.shrek4 {
+    height: 500px;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shrek4 img {
+    width: 100%;
+    height: 320px; 
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
 }
