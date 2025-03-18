@@ -1,30 +1,37 @@
-:root{
-    --cor-hover: #8F8D31; 
+:root {
+    --cor-hover: #8F8D31;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-ul,ol.li{
+
+ul, ol, li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
+
 body {
-    background-color: #8F8D31; 
+    background-color: #8F8D31;
 }
+
+/* Menu */
 .menu {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 16px; 
-    background-color: rgb(88, 64, 64) !important; 
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: rgb(88, 64, 64);
     padding: 16px;
-    width: 100%; 
+    width: 100%;
 }
+
 li {
     display: flex;
     gap: 4px;
@@ -32,33 +39,23 @@ li {
     padding: 4px 16px;
     transition: .5s;
 }
+
 .menu li:hover {
     background-color: var(--cor-hover);
 }
+
 .menu img {
     height: 85px;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    gap: 8px;
-}
+
+/* Container de filmes */
 .filmes {
     display: flex;
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    align-items: center; /* Centraliza verticalmente (se necessário) */
-    flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
-    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 16px;
-    min-height: 100vh; /* Faz com que ocupe toda a altura da tela */
+    min-height: 100vh;
 }
 
 .filmes li {
@@ -71,6 +68,7 @@ li {
     width: 350px;
     text-align: center;
 }
+
 .filmes img {
     width: 100%;
     height: 350px;
@@ -78,17 +76,6 @@ li {
     object-fit: cover;
 }
 
-.filmes span {
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-.filmes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 16px;
-}
 .filmes button {
     background: #000000;
     color: rgb(255, 255, 255);
@@ -98,12 +85,15 @@ li {
     cursor: pointer;
     font-size: 20px;
     width: 60%;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
+
 .filmes button:hover {
     background: #a1a095;
 }
-.shrek1 {
+
+/* Estilos para cada filme */
+.shrek1, .shrek2, .shrek3, .shrek4 {
     height: 500px;
     border-radius: 12px;
     padding: 15px;
@@ -112,122 +102,97 @@ li {
     flex-direction: column;
     align-items: center;
 }
-.shrek1 img {
+
+.shrek1 img, .shrek2 img, .shrek3 img, .shrek4 img {
     width: 100%;
-    height: 320px; 
+    height: 320px;
     border-radius: 10px;
     object-fit: cover;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
-.saiba-mais {
-    background: #000000;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 12px 20px;
+
+/* ======= SEGUNDA PAGE ======= */
+
+
+#details-page {
+    display: none; /* Escondida por padrão */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #8F8D31;
+}
+
+#details-page h1 {
+    font-size: 28px;
+    color: white;
+    padding: 10px;
     border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#cast-list {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    text-align: left;
+}
+
+#cast-list ul {
+    list-style-type: none; /* Remove as bolinhas */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 8 colunas iguais */
+    grid-gap: 10px; /* Espaçamento entre as colunas */
+    margin: 0;
+}
+
+#cast-list li {
+    font-size: 18px; /* Tamanho da fonte */
+    line-height: 1.5; /* Distância entre as linhas */
+    text-align: center; /* Centraliza os itens dentro da célula */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Mudança de cor quando o mouse passar por cima */
+#cast-list li:hover {
+    color: #3B5714; /* Cor do texto ao passar o mouse */
+}
+
+
+#cast-list div {
+    width: 45%;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#random-quote {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #ffffff;
+    border: none;
     cursor: pointer;
-    font-size: 20px;
-    width: 60%; 
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-.saiba-mais:hover {
-    background: #a1a095;
+#quote-text {
+    margin-top: 15px;
+    font-style: italic;
 }
 
-.shrek2 {
-    height: 500px;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.shrek2 img {
-    width: 100%;
-    height: 320px; 
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
-}
-
-.shrek2 {
-    height: 500px;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.shrek2 img {
-    width: 100%;
-    height: 320px; 
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
-}
-.shrek3 {
-    height: 500px;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.shrek3 img {
-    width: 100%;
-    height: 320px; 
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
-}
-.shrek3 {
-    height: 500px;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.shrek3 img {
-    width: 100%;
-    height: 320px; 
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
-}
-.shrek4 {
-    height: 500px;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.shrek4 img {
-    width: 100%;
-    height: 320px; 
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
-}
-.shrek4 {
-    height: 500px;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.shrek4 img {
-    width: 100%;
-    height: 320px; 
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
+#back-button {
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    background-color: #754D43;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
 }
