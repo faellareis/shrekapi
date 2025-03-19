@@ -21,7 +21,6 @@ body {
     background-color: #8F8D31;
 }
 
-/* Menu */
 .menu {
     display: flex;
     justify-content: center;
@@ -48,7 +47,6 @@ li {
     height: 85px;
 }
 
-/* Container de filmes */
 .filmes {
     display: flex;
     justify-content: center;
@@ -92,7 +90,6 @@ li {
     background: #a1a095;
 }
 
-/* Estilos para cada filme */
 .shrek1, .shrek2, .shrek3, .shrek4 {
     height: 500px;
     border-radius: 12px;
@@ -113,23 +110,45 @@ li {
 
 /* ======= SEGUNDA PAGE ======= */
 
-
 #details-page {
-    display: none; /* Escondida por padrão */
+    display: none;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     height: 100vh;
     background-color: #8F8D31;
 }
 
-#details-page h1 {
-    font-size: 28px;
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#movie-image-large {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+#cast-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#cast-container h1 {
+    font-size: 40px;
     color: white;
     padding: 10px;
     border-radius: 8px;
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #cast-list {
@@ -137,42 +156,29 @@ li {
     padding: 15px;
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 60%;
+    justify-content: space-around;
     text-align: left;
 }
 
 #cast-list ul {
-    list-style-type: none; /* Remove as bolinhas */
+    list-style-type: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 8 colunas iguais */
-    grid-gap: 10px; /* Espaçamento entre as colunas */
     margin: 0;
 }
 
 #cast-list li {
-    font-size: 18px; /* Tamanho da fonte */
-    line-height: 1.5; /* Distância entre as linhas */
-    text-align: center; /* Centraliza os itens dentro da célula */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Adiciona uma transição suave */
-}
-
-/* Mudança de cor quando o mouse passar por cima */
-#cast-list li:hover {
-    color: #3B5714; /* Cor do texto ao passar o mouse */
-}
-
-
-#cast-list div {
-    width: 45%;
-    padding: 5px;
     font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#cast-list li:hover {
+    color: #3B5714;
 }
 
 #random-quote {
-    margin-top: 20px;
+    margin-top: 70px; 
     padding: 12px;
     background-color: #ffffff;
     border: none;
@@ -180,7 +186,6 @@ li {
     font-weight: bold;
     border-radius: 5px;
 }
-
 #quote-text {
     margin-top: 15px;
     font-style: italic;
