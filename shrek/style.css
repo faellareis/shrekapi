@@ -53,7 +53,7 @@ li {
     flex-wrap: wrap;
     gap: 20px;
     padding: 16px;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .filmes li {
@@ -65,6 +65,7 @@ li {
     align-items: center;
     width: 350px;
     text-align: center;
+    
 }
 
 .filmes img {
@@ -72,6 +73,7 @@ li {
     height: 350px;
     border-radius: 8px;
     object-fit: cover;
+    
 }
 
 .filmes button {
@@ -125,6 +127,7 @@ li {
     align-items: flex-start;
     width: 80%;
     margin-bottom: 20px;
+    
 }
 
 #movie-image-large {
@@ -200,4 +203,60 @@ li {
     cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
+}
+
+#actor-details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+#actor-details-container {
+    width: 70%;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+#actor-name {
+    font-size: 42px;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 15px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+#actor-details {
+    font-size: 20px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 40px; 
+}
+
+#back-to-movie {
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    background-color: #754D43;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    top: 25vh;
+    left: 0;
 }
