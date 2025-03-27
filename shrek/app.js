@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchActorDetails(actorName) {
         try {
-            // Buscando toda a lista de elenco do filme
+            // buscando toda a lista de elenco 
             const response = await fetch(`https://shrekofficial.com/${currentMovieId}/cast/top`);
             
             if (!response.ok) {
@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
     
             const data = await response.json();
     
-            // Procurando o ator específico na lista de elenco
+            // procurando o ator na lista de elenco
             const actor = data.find(a => a.name === actorName);
     
             if (!actor) {
                 return "Nenhuma informação disponível para esse ator.";
             }
     
-            // Pegando os personagens que ele dublou
+            //pega os personagens que ele dublou
             return actor.characters.length > 0 
                 ? `Personagens: ${actor.characters.join(", ")}`
                 : "Nenhum personagem listado.";
