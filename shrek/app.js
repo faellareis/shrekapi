@@ -51,21 +51,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchActorDetails(actorName) {
         try {
-            const response = await fetch(`https://shrekofficial.com/cast/top${encodeURIComponent(actorName)}`)
+            // Buscando toda a lista de elenco do filme
+            const response = await fetch(`https://shrekofficial.com/${currentMovieId}/cast/top`);
             
-            // exibe a resposta no console antes de convertê-la
-            const textResponse = await response.text()
-            console.log("Resposta da API:", textResponse)
+            if (!response.ok) {
+                throw new Error(`Erro na requisição: ${response.status}`);
+            }
     
-            // tenta converter para JSON
-            const data = JSON.parse(textResponse)
+            const data = await response.json();
+    
+            // Procurando o ator específico na lista de elenco
+            const actor = data.find(a => a.name === actorName);
+    
+            if (!actor) {
+                return "Nenhuma informação disponível para esse ator.";
+            }
+    
+            // Pegando os personagens que ele dublou
+            return actor.characters.length > 0 
+                ? `Personagens: ${actor.characters.join(", ")}`
+                : "Nenhum personagem listado.";
             
-            return data.bio || "Nenhuma informação disponível."
         } catch (error) {
-            console.error("Erro ao buscar detalhes do ator:", error)
-            return "Erro ao obter informações do ator."
+            console.error("Erro ao buscar detalhes do ator:", error);
+            return "Erro ao obter informações do ator.";
         }
     }
+    
 
     async function showMovieDetails(movieId) {
         const movie = movies.find(m => m.id === parseInt(movieId))
